@@ -22,12 +22,10 @@ public class VWOLogin {
 
         WebElement email = driver.findElement(By.xpath("//input[@id='login-username']"));
         WebElement password = driver.findElement(By.xpath("//input[@id='login-password']"));
-        WebElement checkBox_remember = driver.findElement(By.xpath("//input[@id='checkbox-remember']"));
         WebElement signinButton = driver.findElement(By.xpath("//button[@id='js-login-btn']"));
 
         email.sendKeys("siddharth.richhariya123@gmail.com");
         password.sendKeys("Sid@1997");
-        checkBox_remember.isSelected();
         signinButton.click();
 
 

@@ -36,6 +36,12 @@
             <scope>test</scope>
         </dependency>
 
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-testng</artifactId>
+            <version>2.28.0</version>
+        </dependency>
+
     </dependencies>
 
 </project>

@@ -7,13 +7,13 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.Map;
-import java.util.TreeMap;
 
 public class CreateExcel {
 
     public static void main(String[] args) throws IOException {
-        Map<String, Object> data = new TreeMap<>();
+        Map<String, Object> data = new HashMap<>();
         data.put("1", new Object[]{"LoginID", "Email", "Password"});
         data.put("2", new Object[]{"1", "Sid@chart.com", "admin23"});
         data.put("3", new Object[]{"2", "Sid@cap.com", "admin123"});

@@ -8,7 +8,6 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Map;
-import java.util.Set;
 import java.util.TreeMap;
 
 public class CreateExcel {
@@ -22,24 +21,23 @@ public class CreateExcel {
         data.put("5", new Object[]{"4", "Sid@micro.com", "UBABDH4587@"});
         data.put("6", new Object[]{"5", "Sid@out.com", "Saidjf"});
 
-        createExcel("New.xlsx", data);
+        createExcel("New3.xlsx", data);
     }
 
 
     public static void createExcel(String name , Map data) throws IOException {
-        Set<String> keySet = data.keySet();
 
         XSSFWorkbook workbook = new XSSFWorkbook();
         XSSFSheet sheet = workbook.createSheet("Main");
         int rownum = 0;
-
-        for(String key : keySet){
+        Cell cell = null;
+        for(Object key : data.keySet()){
             Row row = sheet.createRow(rownum++);
             Object[] a =  (Object[]) data.get(key);
             int cellnum = 0;
 
             for (Object o : a){
-                Cell cell = row.createCell(cellnum++);
+               cell = row.createCell(cellnum++);
                 cell.setCellValue((String) o);
             }
         }

@@ -24,7 +24,7 @@ public class GetCompanyAndCountryForByPersonName {
             for (int j = 1; j<=col; j++) {
                 String Dynamic_Xpath = first_Part + i + second_Part + j + third_part;
                 String tabledata = driver.findElement(By.xpath(Dynamic_Xpath)).getText();
-                if(tabledata.contains("Roland Mendel")){
+                if(tabledata.contains("Yoshi Tannamuri")){
                     String countrypath = Dynamic_Xpath+"/following-sibling::td";
                     String companypath = Dynamic_Xpath+"/preceding-sibling::td";
                     String comapany_Name = driver.findElement(By.xpath(companypath)).getText();

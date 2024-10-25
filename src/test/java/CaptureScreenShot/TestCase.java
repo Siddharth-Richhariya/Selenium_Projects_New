@@ -19,13 +19,13 @@ public class TestCase {
         TakesScreenshot sc = (TakesScreenshot)driver;
         File screenshot = sc.getScreenshotAs(OutputType.FILE);
 
-        File destination = new File("src/main/resources/Fix.png");
+        File destination = new File("src/main/resources/SC/Fix.png");
 
         try {
             // Copy the file to the destination
             FileUtils.copyFile(screenshot, destination);
         } catch (IOException e) {
-            e.printStackTrace();
+            e.printStackTrace();//
         }
 
         // Close the browser

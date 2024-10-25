@@ -30,7 +30,7 @@ public class CreateExcel {
         XSSFWorkbook workbook = new XSSFWorkbook();
         XSSFSheet sheet = workbook.createSheet("Main");
         int rownum = 0;
-        Cell cell = null;
+        Cell cell;
         for(Object key : data.keySet()){
             Row row = sheet.createRow(rownum++);
             Object[] a =  (Object[]) data.get(key);

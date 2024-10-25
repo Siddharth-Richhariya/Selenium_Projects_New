@@ -39,7 +39,7 @@ public class WindowHandle {
                 System.out.println("Test Case Passed");
             }
             Thread.sleep(1000);
-            driver.switchTo().window(window);
+            driver.switchTo().window(mainWindow);
             if(driver.getPageSource().contains("Opening a new window")){
                 System.out.println("Test Case Passed");
             }

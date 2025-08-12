@@ -10,6 +10,7 @@ public class BaseClass {
         if (driver == null) {
             // Initialize the WebDriver only if it is null
             driver = new ChromeDriver();
+            driver.manage().window().maximize();
         }
         return driver;
     }

@@ -15,6 +15,7 @@ public class DynamicHTMLTableTagTest {
     @BeforeClass
     public void setup() {
         BaseClass.getDriver();
+
     }
 
     // Test method to verify data entry and validation in the dynamic table
